@@ -16,11 +16,9 @@ INSERT INTO companies (
     )
 EOT;
     $result = mysqli_query($link, $sql);
-    if ($result) {
-        echo '登録に成功しました' . PHP_EOL;
-    } else {
-        echo '登録に失敗しました' . PHP_EOL;
-        echo 'debugging Error: ' . mysqli_error($link) . PHP_EOL;
+    if (!$result) {
+        error_log('Error; fail to create company');
+        error_log('debugging Error : ' . mysqli_error($link));
     }
 }
 
