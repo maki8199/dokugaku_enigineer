@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="jp">
 
@@ -11,7 +15,7 @@
 <body>
     <h1>読書ログ</h1>
     <h2>読書ログの登録</h2>
-    <form action="">
+    <form action="create.php" method='post'>
         <div>
             <label for="title">書籍名</label>
             <input type="text" name="title" id="title">
