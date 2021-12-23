@@ -23,28 +23,28 @@
     <form action="create.php" method='post'>
         <div>
             <label for="title">書籍名</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" value=<?php echo $review['title']; ?>>
         </div>
         <div>
             <label for="author">著者名</label>
-            <input type="text" name="author" id="author">
+            <input type="text" name="author" id="author" value=<?php echo $review['author']; ?>>
         </div>
         <div>
             <label>読書状況</label>
-            <input type="radio" name="status" value="未読" id="status1">
+            <input type="radio" name="status" value="未読" id="status1" <?php echo ($review['status'] === '未読') ? 'checked' : ''; ?>>
             <label for="status1">未読</label>
-            <input type="radio" name="status" value="読んでいる" id="status2">
+            <input type="radio" name="status" value="読んでいる" id="status2" <?php echo ($review['status'] === '読んでいる') ? 'checked' : ''; ?>>
             <label for="status2">読んでいる</label>
-            <input type="radio" name="status" value="読了" id="status3">
+            <input type="radio" name="status" value="読了" id="status3" <?php echo ($review['status'] === '読了') ? 'checked' : ''; ?>>
             <label for="status3">読了</label>
         </div>
         <div>
             <label for="score">評価</label>
-            <input type="number" name="score" id="score">
+            <input type="number" name="score" id="score" value=<?php echo $review['score']; ?>>
         </div>
         <div>
             <label for="summary">感想</label>
-            <textarea type="text" name="summary" id="summary"></textarea>
+            <textarea type="text" name="summary" id="summary"><?php echo $review['summary']; ?></textarea>
         </div>
         <button type="submit">登録する</button>
     </form>
