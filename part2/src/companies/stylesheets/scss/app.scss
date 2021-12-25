@@ -1,1 +1,13 @@
+// Line-height
+$heading-line-height: 1.5;
+$line-height-base   : 1.65;
+
+// Font-color
+$gray-dark: #546E7A;
+
 @import '/var/www/html/vendor/twbs/bootstrap/scss/bootstrap';
+
+body {
+    letter-spacing: 0.1em;
+    text-align    : justify;
+}
